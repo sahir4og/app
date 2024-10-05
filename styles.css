@@ -1,0 +1,188 @@
+/* Global styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+        background-image: url('320bg.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+header {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+header:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+.dark-mode-toggle:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: content-box;
+    padding-top: env(safe-area-inset-top);
+    margin-top: -100px;
+    height: 100px;
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.install-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.install-button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.dock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.dock a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dock img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dock a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body.dark-mode header, body.dark-mode .content {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .install-button {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode .install-button:hover {
+    background-color: #bbb;
+    color: #000;
+}
+
+body.dark-mode .dock {
+    background-color: #444;
+}
+
+body.dark-mode .dock a {
+    background-color: #555;
+}
+
+body.dark-mode .dock a:hover {
+    background-color: #666;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
